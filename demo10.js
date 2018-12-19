@@ -17,8 +17,8 @@ const p2 = new Promise((resolve, reject) => {
 });
 
 // Promise.all takes an array of promises
-// returns a new promise that is resolved when all promises
-// in the array are resolved
+// returns a new promise that is resolved when
+// all promises in the array are resolved
 Promise.all([p1, p2])
   .then(result => console.log(result))
   .catch(err => console.log('error', err));

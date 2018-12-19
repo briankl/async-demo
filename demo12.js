@@ -8,13 +8,11 @@ async function displayCommits() {
 }
 displayCommits(); // returns a promise of void
 
-// console.log('before');
 // getUser(1)
 //   .then(user => getRepositories(user.username))
 //   .then(repos => getCommits(repos[0]))
 //   .then(commits => console.log('commits', commits))
 //   .catch(err => console.log('Error', err.message));
-// console.log('after');
 
 function getUser(id) {
   return new Promise((resolve, reject) => {

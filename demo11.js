@@ -16,8 +16,8 @@ const p2 = new Promise((resolve, reject) => {
 });
 
 // Promise.race takes an array of promises
-// returns a new promise that is resolved when all promises
-// in the array are resolved
+// returns a new promise that is resolved when
+// the first promise in the array is resolved
 Promise.race([p1, p2])
   .then(result => console.log(result))
   .catch(err => console.log('error', err));

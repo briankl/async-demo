@@ -1,11 +1,9 @@
-console.log('before');
 getUser(1, user => {
   console.log('User', user);
   getRepositories(user.username, repos => {
     console.log('Repos', repos);
   });
 });
-console.log('after');
 
 function getUser(id, callback) {
   setTimeout(() => {

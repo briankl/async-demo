@@ -1,18 +1,16 @@
 // Named functions
 
-console.log('before');
-getUser(1, getRepositories);
-console.log('after');
+getUser(1, getRepositoriesCallback);
 
-function getRepositories(user) {
-  getRepositories(user.username, getCommits);
+function getRepositoriesCallback(user) {
+  getRepositories(user.username, getCommitsCallback);
 }
 
-function getCommits(repos) {
-  getCommits(repos[0], displayCommits);
+function getCommitsCallback(repos) {
+  getCommits(repos[0], displayCommitsCallback);
 }
 
-function displayCommits(commits) {
+function displayCommitsCallback(commits) {
   console.log(commits);
 }
 
